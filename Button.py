@@ -40,6 +40,7 @@ class Button:
         # Adding the instance to the static list
         Button.allButtons.append(self)
 
+    @staticmethod
     def DrawAll(screen):
         for button in Button.allButtons:
             # Draw the rectangle
@@ -47,6 +48,7 @@ class Button:
             # Draw the text surface
             screen.blit(button.textSurface, [button.rect.x+Button.Padding,button.rect.y+Button.Padding])
 
+    @staticmethod
     def HandleMouseHower(mouseX,mouseY):
         for button in Button.allButtons:
             if button.isDisabled == False:
