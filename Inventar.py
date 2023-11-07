@@ -1,0 +1,3 @@
+itemsDict = {
+    "CheiaPtCufar" : False
+}

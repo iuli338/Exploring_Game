@@ -1,4 +1,3 @@
-from tkinter import BUTT
 import pygame
 
 class Button:
@@ -78,3 +77,14 @@ class Button:
             self.color = Button.colorDict["Disabled"]
         else:
             self.color = Button.colorDict["Normal"]
+
+    def ChangeText(self,newText):
+        self.textSurface = Button.TextFont.render(newText, True, Button.TextColor)
+        # Changing the rect size according to the new surface size
+        savedX, savedY = self.rect.topleft
+        self.rect:pygame.Rect = self.textSurface.get_rect()
+        self.rect.x = savedX
+        self.rect.y = savedY
+        # Calculating the padding
+        self.rect.width = self.rect.width + Button.Padding * 2
+        self.rect.height = self.rect.height + Button.Padding * 2

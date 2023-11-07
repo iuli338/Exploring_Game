@@ -1,0 +1,142 @@
+[
+  {
+    "nume": "???",
+    "text": "Te-ai trezit intr-o camera ciudata.",
+    "alegeriTextList": [
+      "Scoala din pat",
+      null,
+      null
+    ],
+    "eventsDict": {
+      "ChangeImageOnStart": "res/image1.png",
+      "LoadLevelOnClick": [
+        {
+          "LevelName": "O camera ciudata",
+          "buttonIndex": 0
+        }
+      ]
+    }
+  },
+  {
+    "nume": "O camera ciudata",
+    "text": "Te-ai sculat din pat",
+    "alegeriTextList": [
+      "Verifica camera",
+      "Verifica patul",
+      null
+    ],
+    "eventsDict": {
+      "ChangeImageOnStart": "res/image2.png",
+      "LoadLevelOnClick": [
+        {
+          "LevelName": "Usa de la camera ciudata",
+          "buttonIndex": 0
+        },
+        {
+          "LevelName": "Sub pat",
+          "buttonIndex": 1
+        }
+      ]
+    }
+  },
+  {
+    "nume": "Usa de la camera ciudata",
+    "text": "Te-ai intors sa verifici ce e prin camera si ai observat o usa.",
+    "alegeriTextList": [
+      "Deschide usa si iesi din camera",
+      "Intoarce-te la pat",
+      null
+    ],
+    "eventsDict": {
+      "ChangeImageOnStart": "res/image3.png",
+      "LoadLevelOnClick": [
+        {
+          "LevelName": "Holul",
+          "buttonIndex": 0
+        },
+        {
+          "LevelName": "O camera ciudata",
+          "buttonIndex": 1
+        }
+      ]
+    }
+  },
+  {
+    "nume": "Sub pat",
+    "text": "Te-ai pus in genunchi ca sa verifici ce este sub pat si ai observat ceva.",
+    "alegeriTextList": [
+      "Intoarce-te",
+      "Ia cheia",
+      null
+    ],
+    "eventsDict": {
+      "ChangeImageOnStart": "res/image4-1.png",
+      "LoadLevelOnClick": [
+        {
+          "LevelName": "O camera ciudata",
+          "buttonIndex": 0
+        }
+      ],
+      "ChangeImageOnClick": {
+        "NewImagePath": "res/image4-2.png",
+        "buttonIndex": 1,
+        "disableAfterClick": true,
+        "AddItem": {
+          "ItemName": "CheiaPtCufar"
+        }
+      },
+      "DisabledButtonIndexes": []
+    }
+  },
+  {
+    "nume": "Holul",
+    "text": "Ai deschis usa si ai iesit pe hol, la capatul lui se vede un cufar.",
+    "alegeriTextList": [
+      "Mergi spre cufar",
+      "Intoarce-te in camera",
+      null
+    ],
+    "eventsDict": {
+      "ChangeImageOnStart": "res/image5.png",
+      "LoadLevelOnClick": [
+        {
+          "LevelName": "Cufarul",
+          "buttonIndex": 0
+        },
+        {
+          "LevelName": "Usa de la camera ciudata",
+          "buttonIndex": 1
+        }
+      ]
+    }
+  },
+  {
+    "nume": "Cufarul",
+    "text": "Te-ai apropiat de cufar. Pare sa fie incuiat. Ai nevoie de o cheie.",
+    "alegeriTextList": [
+      "Descuie",
+      "Intoarce-te",
+      null
+    ],
+    "eventsDict": {
+      "ChangeImageOnStart": "res/image6-1.png",
+      "LoadLevelOnClick": [
+        {
+          "LevelName": "Holul",
+          "buttonIndex": 1
+        }
+      ],
+      "ChangeImageOnClick": {
+        "NewImagePath": "res/image6-2.png",
+        "buttonIndex": 0,
+        "disableAfterClick": true,
+        "RequiresItem":
+        {
+          "ItemName": "CheiaPtCufar",
+          "FailText": "Ai nevoie de o cheie ca sa deschizi cufarul!"
+        }
+      },
+      "DisabledButtonIndexes": []
+    }
+  }
+]
